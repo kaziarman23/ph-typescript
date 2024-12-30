@@ -1,7 +1,5 @@
 "use strict";
 {
-    // type assertion
-    // It's decleared a key word: "as" to defined the type of a spacifike data.
     const kgToGram = (value) => {
         if (typeof value === "string") {
             return parseInt(value) * 1000;
