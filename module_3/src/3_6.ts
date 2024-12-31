@@ -1,5 +1,5 @@
 {
-  // Private Property
+  // Getter AND Setter
 
   class BankAccount {
     constructor(
@@ -8,19 +8,19 @@
       private _balance: number
     ) {}
 
-    addDeposit(amount: number) {
-      return (this._balance = this._balance + amount);
+    set addDeposit(amount: number) {
+      this._balance = this._balance + amount;
     }
 
-    getBalance() {
+    get getBalance() {
       return this._balance;
     }
   }
 
   const userOne = new BankAccount("bok", "current", 50);
   console.log(userOne);
-  userOne.addDeposit(50);
-  const userAmount = userOne.getBalance();
+  userOne.addDeposit = 70;
+  const userAmount = userOne.getBalance;
   console.log(userOne);
   console.log(userAmount);
 
